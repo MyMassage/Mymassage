@@ -141,7 +141,7 @@
     .hero {
       position: relative;
       background: url('dd.png') center/cover no-repeat;
-      height: 400px;
+      height: 500px;
       display: flex;
       justify-content: left;
       align-items: left;
@@ -166,7 +166,7 @@
     }
 
     .title {
-      font-size: 48px;
+      font-size: 30px;
       font-family: Georgia, 'Times New Roman', Times, serif;
       font-weight: bold;
       margin-bottom: 10px;
@@ -175,9 +175,11 @@
     }
 
     .subtitle {
-      font-size: 18px;
+      font-size: 24px;
       margin-bottom: 20px;
       line-height: 1.5;
+      font-weight: bold;
+      color: #ecbf0b;
       animation: slideInFromLeft 1.5s ease-out; /* Apply animation */
     }
 
@@ -228,11 +230,13 @@
       background-color: #ff8800;
       color: #fff;
       border: 2px solid #ff8800;
+      transition: transform 0.3s ease;
     }
 
     .btn.orange:hover {
       background-color: #e67600;
       border-color: #e67600;
+      transform: scale(1.1);
     }
 
    
@@ -304,6 +308,14 @@
         color: #DAB96B;
         font-weight: bold;
     }
+    .jj{
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+      font-weight: bold;
+      color: #ecbf0b;
+      animation: slideInFromLeft 1.5s ease-out; /* Apply animation */
+    }
   </style>
 </head>
 <body>
@@ -324,12 +336,14 @@
   <section class="hero">
     <div class="overlay"></div>
     <div class="content">
-      <h1 class="title">Massage Panggilan Bandung</h1>
-      <p class="subtitle">MyMassagenet, Spa & Reflexology - Your TRULY Solutions</p>
+      <h1 class="title">"Sudah capek, kena macet, dan harus ke tempat pijat lagi? Kami punya solusinya!"</h1>
+      <p class="subtitle"> </p> 
+       <h6 class="jj"> Nikmati layanan pijat profesional langsung di kenyamanan rumah Anda! Tanpa perlu repot keluar rumah atau menghadapi kemacetan, tim terapis kami siap datang untuk memberikan layanan pijat terbaik</h6>
+   
       <ul class="features">
-        <li><span class="checkmark">✔</span>   <span class="highlight">Terapis Ramah Dan Profesional</span></li>
-        <li><span class="checkmark">✔</span>  <span class="highlight">Pemesanan Mudah Dan Cepat</span> </li>
-        <li><span class="checkmark">✔</span>  <span class="highlight">60 Menit Sampai Lokasi Anda</span></li>
+        <li><span class="checkmark">✔</span>   <span class="highlight">Layanan panggilan: </span>Terapis kami datang ke lokasi Anda kapan saja.</li>
+        <li><span class="checkmark">✔</span>  <span class="highlight">Relaksasi maksimal:</span> Nikmati pijatan tanpa harus lelah di perjalanan. </li>
+        <li><span class="checkmark">✔</span>  <span class="highlight">Privasi terjaga:</span> Semua layanan dilakukan dengan profesionalisme tinggi.</li>
         <li><span class="checkmark">✔</span>   <span class="highlight">Melayani Area Bandung</span></li>
       </ul>
       <div class="buttons">
@@ -390,14 +404,12 @@
 
 
  <!-- WhatsApp Fixed Logo -->
- <div class="whatsapp-fixed">
-    <span class="whatsapp-text">Pesan Disini</span>
-    <a href="https://wa.me/6281293170272">
-      <img src="wa.png" alt="WhatsApp Logo">
-    </a>
-  </div>
-</body>
-</html>
+<div class="whatsapp-fixed">
+  <span class="whatsapp-text">Pesan Disini</span>
+  <a href="https://wa.me/6281293170272">
+    <img src="wa.png" alt="WhatsApp Logo">
+  </a>
+</div>
 
 <style>
   .whatsapp-fixed {
@@ -418,51 +430,105 @@
     border-radius: 5px;
     font-size: 30px;
     font-weight: bold;
-    border: px solid #DAB96B;
     text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
   }
 
   .whatsapp-fixed img {
     width: 100px;
     height: 100px;
-    
+    transition: transform 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
+
+  /* Efek hover untuk teks "Pesan Disini" */
+  .whatsapp-fixed .whatsapp-text:hover {
+    transform: scale(1.1);
+    background-color: #1A8612; /* Warna lebih gelap saat hover */
+  }
+
+  /* Efek hover untuk logo WhatsApp */
+  .whatsapp-fixed img:hover {
+    transform: scale(1.2);
+  }
+</style>
+
  
 </style>
 <h1 style="text-align: center; font-size: 60px;font-family: Georgia, 'Times New Roman', Times, serif;color: #ff8800;">Daftar Layanan</h1>
 
 <div class="imgt">
-    <img src="rrr.png">
-    <img src="rrr.png">
-    <img src="rrr.png">
-    <img src="rrr.png">
+  <img src="rrr.png" class="left">
+  <img src="rrr.png" class="right">
+  <img src="rrr.png" class="left">
+  <img src="rrr.png" class="right">
 </div>
 
 <style>
+.imgt {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.imgt img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Awalnya gambar tidak terlihat */
+  transform: translateX(0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.imgt img.left.active {
+  transform: translateX(0); /* Posisi akhir */
+  opacity: 1; /* Gambar terlihat */
+  transition-delay: 0.8s;
+}
+
+.imgt img.right.active {
+  transform: translateX(0); /* Posisi akhir */
+  opacity: 1; /* Gambar terlihat */
+  transition-delay: 1s;
+}
+
+.imgt img.left {
+  transform: translateX(-50px); /* Muncul dari kiri */
+}
+
+.imgt img.right {
+  transform: translateX(50px); /* Muncul dari kanan */
+}
+
+@media (max-width: 768px) {
   .imgt {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-    max-width: 600px;
+    grid-template-columns: 1fr;
   }
-
-  .imgt img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  @media (max-width: 768px) {
-    .imgt {
-      grid-template-columns: 1fr;
-    }
-  }
+}
 </style>
+
+<script>
+// Menggunakan IntersectionObserver untuk memantau elemen gambar
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".imgt img");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active"); // Tambahkan kelas "active" saat elemen terlihat
+      }
+    });
+  });
+
+  images.forEach((img) => observer.observe(img)); // Daftarkan setiap gambar ke observer
+});
+</script>
+
 
 
 
