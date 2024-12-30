@@ -331,8 +331,7 @@
           <nav class="nav">
             <a href="#tentang">Tentang Kami</a>
             <a href="#daftar">Daftar Layanan</a>
-            <a href="#kenapa-kami">Kenapa Kami</a>
-            <a href="#hubungi">Hubungi</a>
+            <a href="#hubungi">Hubungi Kami</a>
           </nav>
         </header>
       
@@ -458,22 +457,103 @@
 
  
 </style>
-<h1 style="text-align: center; font-size: 60px;font-family: Georgia, 'Times New Roman', Times, serif;color: #ff8800;" id="daftar">Daftar Layanan</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Layanan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
 
-<div class="imgt">
-  <a href="https://wa.me/p/9004208763026293/6281293170272">
-    <img src="et.png" class="left" alt="Gambar 1">
-  </a>
-  <a href="https://www.link2.com">
-    <img src="et2.png" class="right" alt="Gambar 2">
-  </a>
-  <a href="https://www.link3.com">
-    <img src="et3.png" class="left" alt="Gambar 3">
-  </a>
-  <a href="https://www.link4.com">
-    <img src="rrr.png" class="right" alt="Gambar 4">
-  </a>
-</div>
+    .daftar-layanan {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .daftar-layanan h1 {
+      font-size: 36px;
+      color: #ff8000;
+      margin-bottom: 30px;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 260px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="daftar-layanan" id="daftar">
+    <h1>Daftar Layanan</h1>
+    <div class="cards-container">
+      <!-- Pijat Tradisional -->
+      <a href="https://example.com/pijat-tradisional" class="card" target="_blank">
+        <img src="gggg.png" alt="Pijat Tradisional">
+        <h3>Pijat Tradisional</h3>
+        <p>Rasakan relaksasi mendalam dengan teknik pijat tradisional yang diwariskan secara turun-temurun.</p>
+      </a>
+
+      <!-- Pijat Refleksi -->
+      <a href="https://example.com/pijat-refleksi" class="card" target="_blank">
+        <img src="icon.png" alt="Pijat Refleksi">
+        <h3>Pijat Refleksi</h3>
+        <p>Perawatan kaki yang membantu melancarkan sirkulasi darah dan meningkatkan keseimbangan tubuh.</p>
+      </a>
+
+      <!-- Pijat Kerok -->
+      <a href="https://example.com/pijat-kerok" class="card" target="_blank">
+        <img src="jjjk.png" alt="Pijat Kerok">
+        <h3>Pijat Kerok</h3>
+        <p>Terapkan metode tradisional untuk menghilangkan pegal-pegal dengan teknik kerokan profesional.</p>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
 
 
 <style>
@@ -542,4 +622,129 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 </body>
+
+<footer>
+  <div class="hubungi-kami" id="hubung">
+    <h1>Hubungi Kami</h1>
+    <p>Jika Anda memiliki pertanyaan, silakan hubungi kami melalui form di bawah ini:</p>
+
+    <form action="#" method="post" class="form-kontak">
+      <label for="name">Nama:</label>
+      <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+
+      <label for="message">Pesan:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda di sini..." required></textarea>
+
+      <button type="submit">Kirim</button>
+    </form>
+
+    <div class="sosial-media">
+      <h2>Ikuti Kami</h2>
+      <a href="https://www.facebook.com" target="_blank" class="social-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook" />
+      </a>
+      <a href="https://wa.me/1234567890" target="_blank" class="social-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp" />
+      </a>
+      <a href="https://www.instagram.com" target="_blank" class="social-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+      </a>
+      <a href="https://www.tiktok.com" target="_blank" class="social-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046127.png" alt="TikTok" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+  }
+
+  .hubungi-kami {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hubungi-kami h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .hubungi-kami p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+  }
+
+  .form-kontak {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-kontak label {
+    font-size: 14px;
+    text-align: left;
+    color: #555;
+  }
+
+  .form-kontak input,
+  .form-kontak textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .form-kontak button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .form-kontak button:hover {
+    background-color: #0056b3;
+  }
+
+  .sosial-media {
+    margin-top: 30px;
+  }
+
+  .sosial-media h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .sosial-media .social-link {
+    margin: 0 10px;
+    display: inline-block;
+  }
+
+  .sosial-media img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+  }
+
+  .sosial-media img:hover {
+    transform: scale(1.2);
+  }
+</style>
+
+
+
 </html>
