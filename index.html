@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Massage Panggilan Bandung</title>
   <style>
+    html{
+      scroll-behavior: smooth;
+    }
     /* Responsiveness for header and navigation */
     @media (max-width: 768px) {
       .header {
@@ -326,8 +329,8 @@
             <span class="logo-text">MyMassage</span>
           </div>
           <nav class="nav">
-            <a href="tentang kami">Tentang Kami</a>
-            <a href="#harga">Harga</a>
+            <a href="#tentang">Tentang Kami</a>
+            <a href="#daftar">Daftar Layanan</a>
             <a href="#kenapa-kami">Kenapa Kami</a>
             <a href="#hubungi">Hubungi</a>
           </nav>
@@ -355,7 +358,7 @@
   <section class="about-us">
     <div class="container">
       <div class="about-text">
-        <h2 class="about-title animate-on-scroll" data-delay="0.2s">Tentang Kami</h2>
+        <h2 class="about-title animate-on-scroll" data-delay="0.2s" id="tentang">Tentang Kami</h2>
         <h3 class="about-subtitle animate-on-scroll" data-delay="0.4s">MyMassagenet, Spa & Reflexology</h3>
         <p class="animate-on-scroll" data-delay="0.6s">MyMassagenet menyediakan jasa massage/pijat/refleksi panggilan untuk area kota Bandung.</p>
         <p class="animate-on-scroll" data-delay="0.8s">Melalui tenaga terapis yang berpengalaman dan profesional, kami berusaha memberikan pelayanan yang terbaik dalam melayani customer. Kepuasan customer adalah kepuasan Kami.</p>
@@ -455,24 +458,33 @@
 
  
 </style>
-<h1 style="text-align: center; font-size: 60px;font-family: Georgia, 'Times New Roman', Times, serif;color: #ff8800;">Daftar Layanan</h1>
+<h1 style="text-align: center; font-size: 60px;font-family: Georgia, 'Times New Roman', Times, serif;color: #ff8800;" id="daftar">Daftar Layanan</h1>
 
 <div class="imgt">
-  <img src="et.png" class="left">
-  <img src="et2.png" class="right">
-  <img src="et3.png" class="left">
-  <img src="rrr.png" class="right">
+  <a href="https://wa.me/p/9004208763026293/6281293170272">
+    <img src="et.png" class="left" alt="Gambar 1">
+  </a>
+  <a href="https://www.link2.com">
+    <img src="et2.png" class="right" alt="Gambar 2">
+  </a>
+  <a href="https://www.link3.com">
+    <img src="et3.png" class="left" alt="Gambar 3">
+  </a>
+  <a href="https://www.link4.com">
+    <img src="rrr.png" class="right" alt="Gambar 4">
+  </a>
 </div>
+
 
 <style>
 .imgt {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 40px;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
-  max-width: 600px;
+  margin: 30px auto;
+  max-width: 500px;
 }
 
 .imgt img {
@@ -528,9 +540,6 @@ document.addEventListener("DOMContentLoaded", () => {
   images.forEach((img) => observer.observe(img)); // Daftarkan setiap gambar ke observer
 });
 </script>
-
-
-
 
 </body>
 </html>
